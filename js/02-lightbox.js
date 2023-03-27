@@ -18,7 +18,7 @@ console.log(listItem);
 
 listItem.insertAdjacentHTML("afterbegin", imgItem);
 
-// var lightbox = new SimpleLightbox(".gallery a", {
-//   captionDelay: 250,
-//   captionsData: "alt",
-// });
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionDelay: 250,
+  captionsData: "alt",
+});
