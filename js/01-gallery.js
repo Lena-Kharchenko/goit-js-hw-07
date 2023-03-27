@@ -49,14 +49,13 @@ function createModalWindow(imgChange) {
   );
 
   instance.show();
-}
 
-document.addEventListener("keydown", escapeCloseModalWindow);
+  document.addEventListener("keydown", escapeCloseModalWindow);
 
-function escapeCloseModalWindow(event) {
-  const escPress = event.code === "Escape";
-  if (escPress) {
-    instance.close();
-    document.removeEventListener("keydown", escapeCloseModalWindow);
+  function escapeCloseModalWindow(event) {
+    if (event.code === "Escape") {
+      instance.close();
+      document.removeEventListener("keydown", escapeCloseModalWindow);
+    }
   }
 }
